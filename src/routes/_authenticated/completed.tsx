@@ -50,7 +50,7 @@ function CompletedPage() {
                 <motion.div
                   key={b.id}
                   layout="position"
-                  initial={{ opacity: 0, x: -40 }}
+                  initial={{ opacity: 0, x: 60 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.35, ease: [0.34, 1.56, 0.64, 1] }}

@@ -99,7 +99,9 @@ export function PaymentDialog({
     },
     onSuccess: (data, variables) => {
       toast.success("Payment recorded");
+      // Invalidate & remove payments cache so next History tap fetches fresh data (Problem 4)
       qc.invalidateQueries({ queryKey: ["payments", variables.borrowing_id] });
+      qc.removeQueries({ queryKey: ["payments", variables.borrowing_id] });
     },
     onSettled: () => {
       qc.invalidateQueries({ queryKey: ["borrowings"] });

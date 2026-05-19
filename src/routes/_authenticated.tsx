@@ -54,7 +54,7 @@ function AuthenticatedLayout() {
   useEffect(() => {
     if (completedCount > prevCompletedCount.current) {
       setBounceCompleted(true);
-      const t = setTimeout(() => setBounceCompleted(false), 400);
+      const t = setTimeout(() => setBounceCompleted(false), 300);
       prevCompletedCount.current = completedCount;
       return () => clearTimeout(t);
     }
@@ -109,7 +109,7 @@ function AuthenticatedLayout() {
                   <span
                     className={cn(
                       "px-2 py-0.5 text-xs font-semibold rounded-full bg-success text-success-foreground border border-success-border transition-all duration-300 will-change-transform",
-                      bounceCompleted && "scale-125 bg-paid-green text-white animate-[bounce-badge_0.4s_ease-out]"
+                      bounceCompleted && "scale-125 bg-paid-green text-white animate-[bounce-badge_0.3s_ease-out]"
                     )}
                   >
                     {completedCount}
@@ -160,7 +160,7 @@ function AuthenticatedLayout() {
                       <span
                         className={cn(
                           "absolute -top-1.5 -right-2.5 h-4 min-w-[16px] px-1 flex items-center justify-center text-[9px] font-bold rounded-full bg-success text-success-foreground border border-success-border transition-all duration-300 will-change-transform",
-                          bounceCompleted && "scale-125 bg-paid-green text-white animate-[bounce-badge_0.4s_ease-out]"
+                          bounceCompleted && "scale-125 bg-paid-green text-white animate-[bounce-badge_0.3s_ease-out]"
                         )}
                       >
                         {completedCount}
