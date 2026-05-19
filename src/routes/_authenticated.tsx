@@ -137,7 +137,7 @@ function AuthenticatedLayout() {
       </div>
 
       {/* Mobile bottom nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-[1000] border-t border-border bg-card/95 backdrop-blur-md pb-[max(12px,env(safe-area-inset-bottom))]">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-border bg-card/95 backdrop-blur-md pb-[max(12px,env(safe-area-inset-bottom))]">
         <ul className="flex w-full items-stretch">
           {navItems.map((item) => {
             const active = path === item.to;
