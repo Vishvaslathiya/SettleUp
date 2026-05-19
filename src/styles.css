@@ -413,3 +413,36 @@ label[for] {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+
+/* ─── Global Input & Date Field Standardization ─── */
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 48px !important;
+  height: 48px !important;
+  max-height: 52px !important;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure Safari/iOS does not inject large vertical padding */
+input[type="date"]::-webkit-date-and-time-value {
+  margin: 0;
+  text-align: left;
+  line-height: normal;
+}
+
+/* Format the date picker icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Active focus state for all inputs */
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 1px var(--color-primary);
+  border-color: var(--color-primary);
+}
