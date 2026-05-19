@@ -41,7 +41,7 @@ function SettingsPage() {
   return (
     <>
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur border-b border-border">
-        <div className="px-4 md:px-8 py-4 max-w-2xl mx-auto w-full">
+        <div className="px-4 md:px-8 pt-[calc(1rem+env(safe-area-inset-top))] pb-4 max-w-2xl mx-auto w-full">
           <h1 className="text-lg font-semibold">Settings</h1>
         </div>
       </header>

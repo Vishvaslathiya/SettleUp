@@ -48,7 +48,7 @@ function HomePage() {
   return (
     <>
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur border-b border-border">
-        <div className="px-4 md:px-8 py-3.5 flex items-center gap-2 md:gap-3 max-w-6xl mx-auto w-full">
+        <div className="px-4 md:px-8 pt-[calc(0.875rem+env(safe-area-inset-top))] pb-3.5 flex items-center gap-2 md:gap-3 max-w-6xl mx-auto w-full">
           <div className="md:hidden h-9 w-9 rounded-xl bg-primary text-primary-foreground flex items-center justify-center shrink-0">
             <Wallet className="h-4 w-4" />
           </div>

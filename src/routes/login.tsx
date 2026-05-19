@@ -52,7 +52,7 @@ function LoginPage() {
 
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-background px-4 relative">
+    <main className="min-h-[100dvh] flex items-center justify-center bg-background px-4 relative">
       <div className="absolute top-4 right-4">
         <ThemeToggle />
       </div>

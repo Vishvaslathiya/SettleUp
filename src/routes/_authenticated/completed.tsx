@@ -21,7 +21,7 @@ function CompletedPage() {
   return (
     <>
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur border-b border-border">
-        <div className="px-4 md:px-8 py-3 flex items-center justify-between max-w-6xl mx-auto w-full">
+        <div className="px-4 md:px-8 pt-[calc(0.75rem+env(safe-area-inset-top))] pb-3 flex items-center justify-between max-w-6xl mx-auto w-full">
           <h1 className="text-lg font-semibold">Completed</h1>
           <ThemeToggle />
         </div>

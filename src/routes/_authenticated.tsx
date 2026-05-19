@@ -25,14 +25,14 @@ function AuthenticatedLayout() {
 
   if (loading || !user) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-muted-foreground text-sm">
+      <div className="min-h-[100dvh] flex items-center justify-center text-muted-foreground text-sm">
         Loading…
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex bg-background">
+    <div className="min-h-[100dvh] flex bg-background">
       {/* Desktop sidebar */}
       <aside className="hidden md:flex w-60 shrink-0 border-r border-sidebar-border bg-sidebar flex-col">
         <div className="p-5 flex items-center gap-2">
@@ -63,12 +63,12 @@ function AuthenticatedLayout() {
         </nav>
       </aside>
 
-      <div className="flex-1 flex flex-col min-w-0 pb-16 md:pb-0">
+      <div className="flex-1 flex flex-col min-w-0 pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
         <Outlet />
       </div>
 
       {/* Mobile bottom nav */}
-      <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t border-border bg-card/95 backdrop-blur">
+      <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t border-border bg-card/95 backdrop-blur pb-[env(safe-area-inset-bottom)]">
         <ul className="grid grid-cols-3">
           {navItems.map((item) => {
             const active = path === item.to;
