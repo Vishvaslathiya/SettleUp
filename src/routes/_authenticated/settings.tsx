@@ -41,12 +41,15 @@ function SettingsPage() {
   return (
     <>
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur border-b border-border">
-        <div className="px-4 md:px-8 py-3 flex items-center justify-between max-w-2xl mx-auto w-full">
+        <div className="px-4 md:px-8 py-4 max-w-2xl mx-auto w-full">
           <h1 className="text-lg font-semibold">Settings</h1>
-          <ThemeToggle />
         </div>
       </header>
       <main className="px-4 md:px-8 py-5 max-w-2xl mx-auto w-full space-y-3">
+        <Section title="Appearance" desc="Switch between light and dark themes.">
+          <ThemeToggle />
+        </Section>
+
         <Section title="Account" desc={user?.email ?? ""}>
           <Button variant="outline" className="rounded-xl" onClick={handleSignOut}>
             <LogOut className="h-4 w-4 mr-2" /> Sign out
